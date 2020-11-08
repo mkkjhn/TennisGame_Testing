@@ -29,6 +29,35 @@ public class TennisGameTest {
 	}
 	
 	@Test
+	public void testTennisGame_scorePlayer1_15_Player2_love() throws TennisGameException {
+		// Arrange
+		TennisGame game = new TennisGame();
+		
+		game.player1Scored();
+		
+		String score = game.getScore();		
+		assertEquals("Score incorrect", "15 - love", score);
+		
+	}
+	
+	@Test
+	public void testTennisGame_scorePlayer1_30_Player2_40() throws TennisGameException {
+		// Arrange
+		TennisGame game = new TennisGame();
+		
+		game.player1Scored();
+		game.player1Scored();		
+		
+		game.player2Scored();
+		game.player2Scored();
+		game.player2Scored();
+		
+		String score = game.getScore();		
+		assertEquals("Score incorrect", "30 - 40", score);
+		
+	}
+	
+	@Test
 	public void testTennisGame_EahcPlayerWin4Points_Score_Deuce() throws TennisGameException {
 		//Arrange
 		TennisGame game = new TennisGame();
@@ -44,7 +73,7 @@ public class TennisGameTest {
 		game.player1Scored();
 		game.player2Scored();
 		//Act
-		String score = game.getScore() ;
+		String score = game.getScore();
 		// Assert
 		assertEquals("Tie score incorrect", "deuce", score);		
 	}
@@ -142,18 +171,34 @@ public class TennisGameTest {
 		// Assert
 		assertEquals("Advantage score incorrect", "player2 wins", score);		
 	}
-	
+		
 	@Test (expected = TennisGameException.class)
 	public void testTennisGame_Player1WinsPointAfterGameEnded_ResultsException() throws TennisGameException {
 		//Arrange
 		TennisGame game = new TennisGame();
 		//Act
-		game.player1Scored();
-		game.player1Scored();
-		game.player1Scored();
-		game.player1Scored();
-		//Act
+		game.player1Scored(); // 15
+		game.player1Scored(); // 30
+		game.player1Scored(); // 40
+		game.player1Scored(); // wins
+		
+		//Act		
 		// This statement should cause an exception
-		game.player1Scored();			
-	}		
+		game.player1Scored();
+	}
+	
+	@Test (expected = TennisGameException.class)
+	public void testTennisGame_Player2WinsPointAfterGameEnded_ResultsException() throws TennisGameException {
+		//Arrange
+		TennisGame game = new TennisGame();
+		//Act
+		game.player2Scored(); // 15
+		game.player2Scored(); // 30
+		game.player2Scored(); // 40
+		game.player2Scored(); // wins
+		
+		//Act		
+		// This statement should cause an exception
+		game.player2Scored();
+	}
 }
