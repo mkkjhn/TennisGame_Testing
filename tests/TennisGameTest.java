@@ -29,7 +29,7 @@ public class TennisGameTest {
 	}
 	
 	@Test
-	public void testTennisGame_scorePlayer1_15_Player2_love() throws TennisGameException {
+	public void testTennisGame_scorePlayer1_15_Player2_love() {
 		// Arrange
 		TennisGame game = new TennisGame();
 		
@@ -40,7 +40,7 @@ public class TennisGameTest {
 	}
 	
 	@Test
-	public void testTennisGame_scorePlayer1_30_Player2_15() throws TennisGameException {
+	public void testTennisGame_scorePlayer1_30_Player2_15() {
 		// Arrange
 		TennisGame game = new TennisGame();
 		
@@ -54,7 +54,7 @@ public class TennisGameTest {
 	}
 	
 	@Test
-	public void testTennisGame_scorePlayer1_40_Player2_30() throws TennisGameException {
+	public void testTennisGame_scorePlayer1_40_Player2_30() {
 		// Arrange
 		TennisGame game = new TennisGame();
 		
@@ -70,7 +70,7 @@ public class TennisGameTest {
 	}
 	
 	@Test
-	public void testTennisGame_scorePlayer1_30_Player2_40() throws TennisGameException {
+	public void testTennisGame_scorePlayer1_30_Player2_40() {
 		// Arrange
 		TennisGame game = new TennisGame();
 		
@@ -86,7 +86,7 @@ public class TennisGameTest {
 	}
 	
 	@Test
-	public void testTennisGame_EahcPlayerWin4Points_Score_Deuce() throws TennisGameException {
+	public void testTennisGame_EahcPlayerWin4Points_Score_Deuce() {
 		//Arrange
 		TennisGame game = new TennisGame();
 		
@@ -107,7 +107,7 @@ public class TennisGameTest {
 	}
 	
 	@Test
-	public void testTennisGame_Player1_has_advantage() throws TennisGameException {
+	public void testTennisGame_Player1_has_advantage() {
 		//Arrange
 		TennisGame game = new TennisGame();
 		
@@ -125,7 +125,7 @@ public class TennisGameTest {
 	}
 	
 	@Test
-	public void testTennisGame_Player2_has_advantage() throws TennisGameException {
+	public void testTennisGame_Player2_has_advantage() {
 		//Arrange
 		TennisGame game = new TennisGame();
 		
@@ -144,7 +144,7 @@ public class TennisGameTest {
 	}	
 	
 	@Test
-	public void testTennisGame_Player2_advantage_then_Player1_have_advantage() throws TennisGameException {
+	public void testTennisGame_Player2_advantage_then_Player1_have_advantage() {
 		//Arrange
 		TennisGame game = new TennisGame();
 		
@@ -165,7 +165,7 @@ public class TennisGameTest {
 	}
 	
 	@Test
-	public void testTennisGame_Player1_advantage_then_Player2_have_advantage() throws TennisGameException {
+	public void testTennisGame_Player1_advantage_then_Player2_have_advantage() {
 		//Arrange
 		TennisGame game = new TennisGame();
 		
@@ -186,7 +186,7 @@ public class TennisGameTest {
 	}
 	
 	@Test
-	public void testTennisGame_Player1_wins() throws TennisGameException {
+	public void testTennisGame_Player1_wins() {
 		//Arrange
 		TennisGame game = new TennisGame();
 		
@@ -202,7 +202,7 @@ public class TennisGameTest {
 	}
 	
 	@Test
-	public void testTennisGame_Player1_wins_after_strech() throws TennisGameException {
+	public void testTennisGame_Player1_wins_after_strech() {
 		//Arrange
 		TennisGame game = new TennisGame();
 		
@@ -226,7 +226,7 @@ public class TennisGameTest {
 	}
 	
 	@Test
-	public void testTennisGame_Player2_wins() throws TennisGameException {
+	public void testTennisGame_Player2_wins() {
 		//Arrange
 		TennisGame game = new TennisGame();		
 	
@@ -242,7 +242,7 @@ public class TennisGameTest {
 	}
 	
 	@Test
-	public void testTennisGame_Player2_wins_after_strech() throws TennisGameException {
+	public void testTennisGame_Player2_wins_after_strech() {
 		//Arrange
 		TennisGame game = new TennisGame();
 		
